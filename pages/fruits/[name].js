@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { usePageTransition } from '../../../utils/use-page-transition'
+import { usePageTransition } from '../../utils/use-page-transition'
 import Image from 'next/image'
 import Nutrition from '../../components/nutrition'
 import { middleware } from '../../utils/middleware'
