@@ -17,7 +17,7 @@ export default function PrerenderButton() {
   }
 
   return (
-    <button className='ml-auto bg-gray-200 hover:bg-gray-300 px-4 rounded' onClick={handleOnClick}>
+    <button className='ml-auto bg-gray-200 hover:bg-gray-300 px-4 rounded' onClick={handleClick}>
       Prerender
     </button>
   )

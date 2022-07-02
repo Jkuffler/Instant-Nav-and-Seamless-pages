@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+import {usePageTransitionPrep} from '../utils/use-page-transition'
 import PrerenderButton from './prerender-button'
 import Link from 'next/link'
 import Icon from './icon'
@@ -23,10 +24,10 @@ import Icon from './icon'
 
 function ListItemForSPA({ item, href }) {
   // Codelab: Add Shared Element Transitions.
-  // const transitionNextState = usePageTransitionPrep()
+  const transitionNextState = usePageTransitionPrep()
   const handleClick = async (e) => {
-    // const elm = e.target.closest('a')
-    // await transitionNextState(elm)
+    const elm = e.target.closest('a')
+    await transitionNextState(elm)
   }
   return (
     <Link href={href}>
@@ -44,7 +45,7 @@ function ListItemForMPA({ item, href }) {
       <Icon src={item.image} />
       <div className='text-xl'>{item.name}</div>
       {/* Codelab: Add PrerenderButton component. */}
-      {/* <PrerenderButton /> */}
+      <PrerenderButton />
     </a>
   )
 }

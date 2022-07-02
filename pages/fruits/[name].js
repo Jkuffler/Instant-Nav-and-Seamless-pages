@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+import { usePageTransition } from '../../../utils/use-page-transition'
 import Image from 'next/image'
 import Nutrition from '../../components/nutrition'
 import { middleware } from '../../utils/middleware'
@@ -23,8 +23,7 @@ import { middleware } from '../../utils/middleware'
 const Item = ({ data }) => {
   const { name, image, amountPer, nutrition } = data
   // Codelab: Add the Shared Element Transitions API.
-  const ref = null
-  // const ref = usePageTransition()
+  const ref = usePageTransition()
 
   return (
     <div className={'flex flex-col items-center justify-center py-4 px-4 sm:flex-row'} ref={ref}>
